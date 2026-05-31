@@ -1,0 +1,5 @@
+config SHIELD_PUGGY_LEFT
+    def_bool $(shields_list_contains,puggy_left)
+
+config SHIELD_PUGGY_RIGHT
+    def_bool $(shields_list_contains,puggy_right)

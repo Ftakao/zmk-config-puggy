@@ -1,0 +1,16 @@
+if SHIELD_PUGGY_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "puggy"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_PUGGY_LEFT
+
+if SHIELD_PUGGY_LEFT || SHIELD_PUGGY_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif # SHIELD_PUGGY_LEFT || SHIELD_PUGGY_RIGHT
