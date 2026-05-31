@@ -25,24 +25,18 @@
             >;
         };
 
-        raise_layer {
-            bindings = <
+　　　　　raise_layer {
+            bindings = < // 数字・記号・BT
                 &trans &kp N1       &kp N2       &kp N3     &kp N4   &kp N5                     &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
                 &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR &kp SEMI &kp MINUS &trans    &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans       &trans       &trans     &trans   &trans    &trans    &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans       &trans       &trans     &trans   &none     &trans    &trans &trans &trans &trans &trans &trans &trans
             >;
-　　　　　};
-
-            sensor-bindings = <
-                // left  vertical   encoder  up       <-> down
-                &inc_dec_kp                  C_VOL_UP     C_VOL_DN
-                // left  horizontal encoder  right    <-> left
-                &inc_dec_kp                  PG_UP        PG_DN
-                // right vertical   encoder  down     <-> up
-                &inc_dec_kp                  C_VOL_DN     C_VOL_UP
-                // right horizontal encoder  right    <-> left
-                &inc_dec_kp                  PG_UP        PG_DN
+            sensor-bindings = < // encoders
+                &inc_dec_kp C_VOL_UP C_VOL_DN
+                &inc_dec_kp PG_UP    PG_DN
+                &inc_dec_kp C_VOL_DN C_VOL_UP
+                &inc_dec_kp PG_UP    PG_DN
             >;
         };
 
