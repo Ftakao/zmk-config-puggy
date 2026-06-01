@@ -1,9 +1,5 @@
 #include "puggy.dtsi"
 
-// puggy_right.overlay
-&default_transform {
-    row-offset = <6>;
-};
 
 &kscan0 {
     interrupt-gpios
@@ -28,4 +24,9 @@
     a-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     b-gpios = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     status = "okay";
+};
+
+// puggy_right.overlay
+&default_transform {
+    row-offset = <6>;
 };
