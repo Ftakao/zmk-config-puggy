@@ -1,8 +1,6 @@
 #include "puggy.dtsi"
 
-&default_transform {
-    row-offset = <6>;
-};
+
 
 &kscan0 {
     interrupt-gpios
